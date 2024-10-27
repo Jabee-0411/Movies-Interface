@@ -7,7 +7,7 @@ fetch('register.txt')
         return response.text()
     })
     .then(text => {
-        const arr = text.split(",\r\n");
+        const arr = text.split(",/\r?\n/");
 
         arr.forEach(element => {
             const targetElement = document.querySelector('.movies');
