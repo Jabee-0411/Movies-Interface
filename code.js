@@ -41,16 +41,16 @@ function start() {
             title.src = "./media/title/" + heyy.id + ".png"
 
             const image = new Image();
-            imgSrc = "url(./media/background/" + heyy.id
-            image.src = imgSrc
+            imgSrc = "./media/background/" + heyy.id
+            image.src = imgSrc + ".jpg"
 
             image.onload = () => {
 
-                background.style.backgroundImage = imgSrc + ".png)"
+                background.style.backgroundImage = "url(" + imgSrc + ".jpg)"
             }
             image.onerror = () => {
 
-                background.style.backgroundImage = imgSrc + ".jpg)"
+                background.style.backgroundImage = "url(" + imgSrc + ".png)"
             }
 
             description(heyy.id).then(result => {
