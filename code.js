@@ -17,7 +17,7 @@ fetch('register.txt')
             list.id = element
 
             const img = document.createElement("img");
-            img.src = "/media/movies/" + element + ".jpg";
+            img.src = "./media/movies/" + element + ".jpg";
 
             list.appendChild(img);
             targetElement.appendChild(list)
@@ -38,10 +38,10 @@ function start() {
     gonjam.forEach(heyy => {
         heyy.addEventListener("click", function () {
 
-            title.src = "/media/title/" + heyy.id + ".png"
+            title.src = "./media/title/" + heyy.id + ".png"
 
             const image = new Image();
-            imgSrc = "/media/background/" + heyy.id
+            imgSrc = "./media/background/" + heyy.id
             image.src = imgSrc + ".jpg"
 
             image.onload = () => {
@@ -61,7 +61,7 @@ function start() {
 
     async function description(description) {
 
-        const response = await fetch('/description/' + description + '.txt')
+        const response = await fetch('./description/' + description + '.txt')
         const text = await response.text();
         return text
     }
