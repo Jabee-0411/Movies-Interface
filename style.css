@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(0, 0, 0);
+}
+.nav {
+    width: 100dvw;
+    padding: 20px;
+    padding-left: 60px;
+    padding-right: 50px;
+    box-sizing: border-box;
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    color: antiquewhite;
+
+    >.wrapper {
+        display: flex;
+        gap: 30px;
+
+        >.img {
+            width: 6vw;
+            display: flex;
+            align-items: center;
+
+            >img {
+                width: 100%;
+            }
+        }
+
+        >.options {
+            >ul {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                padding: 0;
+                gap: 18px;
+                list-style: none;
+                font-size: 1rem;
+                font-family: "Montserrat", sans-serif;
+            }
+
+
+        }
+
+
+    }
+
+    >.icon {
+        font-size: 1.5rem;
+    }
+}
+
+/* PREVIEW------------------------------------------------- */
+.content {
+    width: 100%;
+    >.preview {
+        z-index: -1;
+        background-image:url(./media/background/windbreaker3.jpg);
+        width: 100%;
+        height: 85dvh;
+        background-size: cover;
+        position: relative     
+    }
+    >.preview::before, .preview::after{
+        content: ' ';
+        width: 100%;
+        height: 20%;
+        background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+        position: absolute;
+    }
+    .preview::after{
+        background: linear-gradient(to top, rgba(0,0,0,1), transparent);
+        bottom: 0;
+        height: 50%;
+
+    }
+    .wrapper-preview{
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 40%;
+        padding-left: 60px;
+        position: absolute;
+        bottom: 100px;
+        
+        >img{
+            width: 100%;
+        }
+        >p{
+            font-size: 1.2rem;
+            color: antiquewhite;
+            font-family: "Montserrat", sans-serif;
+        }
+        >.buttons{
+            display: flex;
+            gap: 12px;
+            >button{
+                font-size: 1.1rem;
+                padding: 10px 20px 10px 20px;
+                border-radius: 5px;
+                border: none;    
+            }
+            >button:nth-child(2){
+                background-color: rgba(255, 255, 255, 0.3);
+                color: #fff;
+            }
+
+        }
+
+    }
+    >.selection{
+        padding-left: 60px;
+        position: relative;
+        bottom: 30px;
+        >p{
+            color: #fff;
+            font-family: "Montserrat", sans-serif;
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 25px;
+        }
+        >.movies{
+            display: flex;
+            gap: 15px;
+            >.list{
+                width: 208px;
+                height: 312px;
+                >img{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 5px;
+                    object-fit: cover;
+                }
+                
+            }
+            >.list:hover{
+                transform: scale(1.1);
+                transition: 0.3s;
+            }
+
+        }
+    }
+
+}
