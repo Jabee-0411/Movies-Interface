@@ -27,7 +27,7 @@ body{
         gap: 30px;
 
         >.img {
-            width: 6vw;
+            width: 6rem;
             display: flex;
             align-items: center;
 
@@ -61,6 +61,7 @@ body{
 .nav.scroll{
     background-color: rgb(20, 19, 19);
     transition: 0.2s;
+    z-index: 2;
 
 }
 
@@ -73,6 +74,7 @@ body{
         width: 100%;
         height: 85dvh;
         background-size: cover;
+        background-position-x: center;
         position: relative     
     }
     >.preview::before, .preview::after{
@@ -102,7 +104,7 @@ body{
             width: 100%;
         }
         >p{
-            font-size: 1.2rem;
+            font-size: clamp(1.0625rem, 0.717rem + 0.7547vw, 1.2rem);
             color: antiquewhite;
             font-family: "Montserrat", sans-serif;
         }
@@ -140,6 +142,7 @@ body{
             grid-template-columns:repeat(6, 1fr);
             gap: 20px;
             >.list{
+                transition: 0.3s;
                 >img{
                     width: 100%;
                     height: 100%;

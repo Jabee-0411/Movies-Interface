@@ -1,0 +1,10 @@
+@media only screen and (max-width: 600px) {
+    .content .wrapper-preview{
+        width: 80%;
+        bottom: 45px;
+
+    }
+    .content .selection .movies{
+        grid-template-columns:repeat(3, 1fr);
+    }
+  }
