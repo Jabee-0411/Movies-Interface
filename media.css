@@ -1,10 +1,48 @@
 @media only screen and (max-width: 600px) {
-    .content .wrapper-preview{
-        width: 80%;
-        bottom: 45px;
+    .nav {
+        padding: 12px;
+        padding-left: 18px;
+        padding-right: 30px;
+        justify-content: left;
+
+        >.wrapper {
+            width: 100%;
+            justify-content: space-between;
+            padding-right: 15px;
+
+            .options {
+                >ul {
+                    width: 100%;
+                }
+            }
+        }
+
 
     }
-    .content .selection .movies{
-        grid-template-columns:repeat(3, 1fr);
+
+    .content .wrapper-preview {
+        width: 80%;
+        bottom: 45px;
+        padding-left: 18px;
+
+        .buttons {
+            >button {
+                padding: 10px;
+            }
+
+        }
+
     }
-  }
+
+    .content .selection {
+        padding-left: 18px;
+
+        >.movies {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 5px;
+        }
+
+
+
+    }
+}

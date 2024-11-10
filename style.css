@@ -17,9 +17,10 @@ body{
     padding-left: 60px;
     padding-right: 50px;
     box-sizing: border-box;
+    justify-content: space-between;
     display: flex;
     position: fixed;
-    justify-content: space-between;
+    
     color: antiquewhite;
 
     >.wrapper {
@@ -46,6 +47,10 @@ body{
                 list-style: none;
                 font-size: 1rem;
                 font-family: "Montserrat", sans-serif;
+
+                >a{
+                    color: #fff;
+                }
             }
 
 
